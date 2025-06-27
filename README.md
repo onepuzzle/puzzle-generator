@@ -1,23 +1,23 @@
 # Bitcoin Puzzle Refactor
 
-This project provides a C++ implementation to generate and verify the Bitcoin Puzzle sequences originally created by satoshi_rising. It includes deterministic key derivation, bit‑masking, address and WIF generation, and range percentage calculation.
+This project provides a C++ implementation to generate and verify the Bitcoin Puzzle sequences originally created by saatoshi_rising. It includes deterministic key derivation, bit‑masking, address and WIF generation, and range percentage calculation.
 
 ## Two Versions of the Bitcoin Puzzle Generator
 
-I’m offering two slightly different C++ scripts that let you reproduce the famous Bitcoin Puzzle by **satoshi\_rising**. While both programs perform the same core tasks—deterministically generating private keys, applying bitwise masks, computing the corresponding P2PKH addresses and WIFs, and showing progress through the keyspace—they differ in style, modularity, and output details:
+I’m offering two slightly different C++ scripts that let you reproduce the famous Bitcoin Puzzle by **saatoshi\_rising**. While both programs perform the same core tasks—deterministically generating private keys, applying bitwise masks, computing the corresponding P2PKH addresses and WIFs, and showing progress through the keyspace—they differ in style, modularity, and output details:
 
 **“Historical” Monolith Variant**
 
 * **Single file, minimal boilerplate.**
 * Direct OpenSSL and HMAC calls inside `main()`.
 * Output: Index, PrivateKey (hex), Address, WIF, Status (MATCH/FAIL).
-* **Why?** As close as possible to satoshi\_rising’s original script, so you can follow the unadulterated approach step by step.
+* **Why?** As close as possible to saatoshi\_rising’s original script, so you can follow the unadulterated approach step by step.
 
-### Which version most closely matches satoshi\_rising’s original script?
+### Which version most closely matches saatoshi\_rising’s original script?
 
-The **monolith variant**—with its linear, unabstracted flow and simple 4-byte HMAC index—is exactly what satoshi\_rising likely used back in 2015/2017. It avoids any extra helper functions or extensions added later. If you want the pure Puzzle experience or to recreate the original Puzzle transactions exactly, this is the version to choose.
+The **monolith variant**—with its linear, unabstracted flow and simple 4-byte HMAC index—is exactly what saatoshi\_rising likely used back in 2015/2017. It avoids any extra helper functions or extensions added later. If you want the pure Puzzle experience or to recreate the original Puzzle transactions exactly, this is the version to choose.
 
-> **Fun Fact:** If satoshi\_rising sees this script, he’ll be amazed at how many ways you can structure the same algorithm—and a little nervous, too, since now anyone can scan all the puzzles in seconds (or maybe he used an entirely different method to generate the wallets)…
+> **Fun Fact:** If saatoshi\_rising sees this script, he’ll be amazed at how many ways you can structure the same algorithm—and a little nervous, too, since now anyone can scan all the puzzles in seconds (or maybe he used an entirely different method to generate the wallets)…
 
 ## Prerequisites
 
