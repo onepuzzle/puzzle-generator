@@ -1,4 +1,4 @@
-# Bitcoin Puzzle Refactor
+# Bitcoin Puzzle Generator
 
 This project provides a C++ implementation to generate and verify the Bitcoin Puzzle sequences originally created by saatoshi_rising. It includes deterministic key derivation, bit‑masking, address and WIF generation, and range percentage calculation.
 
@@ -51,8 +51,7 @@ sudo apt install -y \
 ├── CMakeLists.txt          # Top-level CMake configuration
 ├── src/
 │   ├── deterministic_wallet.cpp     # Main generator (v1)
-│   └── deterministic_wallet_v2.cpp  # Refactored version
-├── puzzles.cpp             # Definition of the Puzzle array
+│   └── deterministic_wallet_v2.cpp  # V2
 └── README.md               # This file
 ```
 
@@ -100,7 +99,7 @@ sudo apt install -y \
 * `<masterSeed>`: Either a 64‑hex seed or a passphrase (SHA256 hashed internally)
 * `[hideNonMatches]`: Optional flag (`true`) to omit unsolved puzzles
 
-For the refactored version:
+For the v2 version:
 
 ```bash
 ./build/bin/deterministic_wallet_v2 160 abcd1234ef...(private key hex)
